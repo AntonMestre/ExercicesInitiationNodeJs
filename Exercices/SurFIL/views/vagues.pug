@@ -1,0 +1,35 @@
+html
+  head
+    title 🏄🏿‍♀️ SurFIL
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  body
+    .jumbotron.text-center(style="background: url('wave.jpg');background-position:center;")
+      h1.text-dark.display-1 🏄🏿‍♀️ Sur
+        strong.text-primary FIL
+    h3.text-center 🌊 Conditions sur le spot (7 jours)
+    .container(style='height:50px;')
+    .container.mx-auto.w-75
+      #chart
+    script(src='https://cdn.jsdelivr.net/npm/apexcharts')
+    script.
+        let tableauTaille="!{taille}";
+        let taille = tableauTaille.split(',')
+
+        let tableauJour="!{jour}";
+        let jour = tableauJour.split(',')
+
+        var options = {
+        chart: {
+        type: 'bar',
+        width: '100%'
+        },
+        series: [{
+        name: 'taille (en cm)',
+        data: taille
+        }],
+        xaxis: {
+        categories: jour
+        }
+        }
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();

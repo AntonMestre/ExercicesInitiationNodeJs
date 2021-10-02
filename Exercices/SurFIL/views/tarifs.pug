@@ -1,0 +1,40 @@
+html
+  head
+    title 🏄🏿‍♀️ SurFIL
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+  body
+    .jumbotron.text-center(style="background: url('wave.jpg');background-position:center;")
+      h1.text-dark.display-1 🏄🏿‍♀️ Sur
+        strong.text-primary FIL
+    h3.text-center 💲 Tarifs
+    .container(style='height:50px;')
+    .container.mx-auto.w-75
+     table.table#mytab
+        thead
+            tr
+            th(scope='col') tailleDePlanche
+            th(scope='col') deuxHeuresDeLocation
+            th(scope='col') demiJourneeDeLocation
+        tbody
+          tr
+
+    script. 
+
+        let tarifs=!{tarifs};
+        tarifs = JSON.stringify(tarifs)
+        tarifs = JSON.parse(tarifs)
+
+        let taillePlanches = [];
+        let demiJourneeDeLocation = [];
+        let deuxHeuresDeLocation = [];
+
+        for(var i = 0; i < tarifs.length; i++){
+            demiJourneeDeLocation[i]=tarifs[i].demiJourneeDeLocation;
+            deuxHeuresDeLocation[i]=tarifs[i].deuxHeuresDeLocation;
+            taillePlanches[i]=tarifs[i].tailleDePlanche;
+        }
+
+      var table = document.getElementById("mytab");
+      for(var i=0; i < taillePlanches.length; i++){
+        table.innerHTML+="<tr><td>"+taillePlanches[i]+"</td><td>"+deuxHeuresDeLocation[i]+"€"+"</td><td>"+demiJourneeDeLocation[i]+"€"+"</td></tr>";
+      }

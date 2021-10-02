@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+    title 🏄🏿‍♀️ SurFIL
+  body
+    .jumbotron.text-center(style="background: url('wave.jpg');background-position:center;")
+      h1.text-dark.display-1 🏄🏿‍♀️ Sur
+        strong.text-primary FIL
+    p.text-center.w-75.mx-auto.text-secondary Salut les Sur
+      strong.text-primary FIL
+      | , heureux de vous accueillir sur le site de notre école de surf ! Vous pouvez accéder à la météo de surf, aux horaires et tarifs de notre école. Vous avez tout pour nous rejoindre, venez nombreux !
+    .container
+      .row
+        .col.text-right
+          a.btn.btn-primary(href='./tarifs') 💲 Voir les tarifs
+        .col
+          a.btn.btn-primary(href='./vagues') 🌊 Voir la taille des vagues
+      .container(style='height:50px;')
+      .container
+        .row
+          .col
+            hr
+          .col
+            h3.text-secondary.text-center Avis sur l'école
+          .col
+            hr
+      .container(style='height:25px;')
+      .container.mx-auto.w-50
+        .carder
+          .row.align-items-center
+            .col-3
+              img.rounded-circle(src='tete.jpg' width='100px')
+            .col
+              p ⭐⭐⭐⭐⭐
+              p
+                | "J'adore cette école ! Gros spot en face avec des tubes digne de Nazaré !"
+              small
+                | -- Philippe, Père de famille.

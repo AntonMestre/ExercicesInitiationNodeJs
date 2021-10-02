@@ -1,0 +1,15 @@
+[{ 
+"tailleDePlanche": 6,
+"deuxHeuresDeLocation": 10,
+"demiJourneeDeLocation":15
+},
+{ 
+"tailleDePlanche": 8,
+"deuxHeuresDeLocation": 12,
+"demiJourneeDeLocation":17
+},
+{ 
+"tailleDePlanche": 11,
+"deuxHeuresDeLocation": 14,
+"demiJourneeDeLocation":19
+}]

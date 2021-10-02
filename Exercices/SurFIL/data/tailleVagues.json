@@ -1,0 +1,30 @@
+[
+    {
+       "jour": "lundi",
+       "taille":150
+    },
+    {
+        "jour": "mardi",
+        "taille":143
+     },
+     {
+        "jour": "mercredi",
+        "taille":125
+     },
+     {
+        "jour": "jeudi",
+        "taille":110
+     },
+     {
+        "jour": "vendredi",
+        "taille":180
+     },
+     {
+        "jour": "samedi",
+        "taille":185
+     },
+     {
+        "jour": "dimanche",
+        "taille":182
+     }
+ ]
